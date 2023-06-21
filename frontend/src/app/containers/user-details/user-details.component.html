@@ -1,0 +1,40 @@
+<div id="user-profile">
+  <div class="email-place">Profil użytkownika <br> {{userProfile?.email}} </div>
+  <div> imie i nazwisko: {{userProfile?.username}} </div>
+  <div> liczba wszystkich rezerwacji: {{userProfile?.total_reservations}} </div>
+  <div *ngIf="userProfile"> całkowity zysk: {{totalValue(userProfile.history) | currency: "PLN"}} </div>
+  <br>
+  <br>
+
+  <span style="font-size: 35px">Ostatnie zakupy biletów powiązane z kontem </span>
+
+  <ng-container *ngIf="!userProfile?.history">
+    Nie dokonano rezerwacji w ostatnim czasie.
+  </ng-container>
+
+  <ng-container *ngIf="userProfile?.history">
+    <div class="last-reservations">
+      <div *ngFor="let historyRecord of userProfile?.history" class="history-record">
+        imie pasażera: {{historyRecord.ticket_username}}
+        <br>
+        pociąg: {{historyRecord.train}}
+        <br>
+        miejsce: {{historyRecord.seat}}
+        <br>
+        cena: {{historyRecord.final_cost | currency: "PLN"}}
+        <br>
+        <div *ngIf="historyRecord.canceled" class="ticket-status">
+          bilet został anulowany
+        </div>
+        <div *ngIf="!historyRecord.canceled"class="ticket-status">
+          <button (click)="deleteReservationButtonHandler(historyRecord.train, historyRecord.seat)">usuń rezerwacje </button>
+        </div>
+
+
+      </div>
+    </div>
+  </ng-container>
+
+</div>
+
+

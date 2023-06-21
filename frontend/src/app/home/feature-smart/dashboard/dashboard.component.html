@@ -1,0 +1,44 @@
+<div class="default special">
+  <div>
+    <img src="assets/stream.png" alt="search" height="50" width="50" id="live-icon">
+    <span class="special">{{statistics.revenue | currency:'PLN'}}</span>
+  </div>
+  <span class="smaller-text">całkowity zysk</span>
+</div>
+
+<div id="stats-container">
+  <div class="default">
+    {{statistics.total_reservations}}
+    <span class="smaller-text">sprzedanych biletów</span>
+  </div>
+
+  <div class="horizontal-container">
+    <div class="default">
+      {{statistics.adult_tickets}}
+      <span class="smaller-text">biletów normalnych</span>
+    </div>
+    <div class="default">
+      {{statistics.student_tickets}}
+      <span class="smaller-text">biletów ulgowych</span>
+    </div>
+  </div>
+
+
+  <div class="default">
+    {{statistics.last_reservation_time | date:'dd.MM.yyyy HH:mm'}}
+    <span class="smaller-text">data ostatniego zakupu</span>
+  </div>
+
+  <div class="horizontal-container">
+    <div class="default button smaller-text button-div1" routerLink="/clients">
+      <img src="assets/search.png" alt="search" height="50" width="50" style="filter: invert(100%) grayscale(100%);">
+      przeglądaj klientów
+    </div>
+
+    <div class="default button smaller-text button-div2" routerLink="/trains">
+      <img src="assets/search.png" alt="search" height="50" width="50" style="filter: invert(100%) grayscale(100%);">
+      dostępne pociągi
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,57 @@
+#available-trains {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  overflow-x: auto;
+  height: 100%;
+}
+
+.train-box {
+  padding: 35px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 13px;
+  margin: 10px 0;
+  background-color: #343434;
+  color: white;
+  font-weight: bold;
+}
+
+.train-name {
+  font-size: 23px;
+  width: 200px;
+}
+
+.train-box:hover {
+  background-color: rgba(84, 84, 84, 0.71);
+  border: 1px solid black;
+  color: black;
+}
+
+.add-new {
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  width: 210px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 7px;
+  font-size: 20px;
+}
+
+.button:hover {
+  cursor: pointer;
+  border: 1px solid #d57272;
+  color: #d57272;
+}

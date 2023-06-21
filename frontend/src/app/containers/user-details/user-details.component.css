@@ -1,0 +1,42 @@
+:host {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 50px 300px;
+}
+
+#user-profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-place {
+  font-weight: bold;
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.last-reservations {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.history-record {
+  border-radius: 7px;
+  border: 1px solid black;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+.ticket-status {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-weight: bold;
+}
