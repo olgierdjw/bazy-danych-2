@@ -6,6 +6,13 @@
 | frontend | Angular          |
 | backend | FastApi (Python) |
 | baza danych | MongoDB          |
+### Autorzy
+
+Laura Wiktor
+
+Olgierd Jesionek-Wróblewski
+
+Adam Biśta
 
 ### Strona startowa
 ![img_15.png](img_15.png)
