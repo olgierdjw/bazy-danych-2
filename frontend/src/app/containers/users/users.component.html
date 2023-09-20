@@ -1,0 +1,29 @@
+<div id="title" class="section">
+  Zarejestrowani użytkownicy
+</div>
+
+<div id="add-new" class="section">
+  <input type="text" placeholder="imie i nazwisko" [(ngModel)]="newUsername">
+  <input type="email" placeholder="email" [(ngModel)]="newEmail">
+  <button (click)="createUserHandler()">dodaj</button>
+</div>
+
+<div id="user-list" class="section">
+
+  <div class="titles">
+    <div class="column column-title-text">email</div>
+    <div class="column column-title-text">imie i nazwisko</div>
+    <div class="column column-title-text">liczba zakupionych biletów</div>
+    <div class="column column-title-text">historia zakupów</div>
+  </div>
+
+  <div class="user" *ngFor="let user of allUsers">
+    <div class="column">{{user.email}}</div>
+    <div class="column">{{user.username}}</div>
+    <div class="column">{{user.total_reservations}}</div>
+    <div class="column">
+      <button (click)="userDetailsRedirect(user)">zobacz</button>
+    </div>
+  </div>
+
+</div>

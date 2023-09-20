@@ -1,0 +1,80 @@
+#seat-details-c {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 6px;
+  flex: 1;
+  background-color: #bdbcbc;
+  color: black;
+}
+
+#left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  font-weight: bold;
+}
+
+#right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 7px;
+  font-size: 18px;
+}
+
+.button-red {
+  background-color: red;
+  width: 180px;
+}
+
+.button:hover {
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.buy-button {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.buy-button:hover {
+  background-color: black;
+  color: #d57272;
+  cursor: pointer;
+  border: 1px solid #d57272;;
+}

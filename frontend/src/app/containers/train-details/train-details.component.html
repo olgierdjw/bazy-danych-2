@@ -1,0 +1,35 @@
+<div id="train-details">
+
+  <div id="train-info">
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+      <div id="go-back-button" (click)="exit()">GO BACK</div>
+      <span style="font-size: 34px">{{train.name}}</span>
+    </div>
+
+    <p>data odjazdu: {{dateString(train.departure_time)}}</p>
+    <p>train id: {{train._id}}</p>
+    <p>liczba wszystkich miejsc: {{train.free_seats.length}}</p>
+    <p>wolne miejsca: {{calculateSum(train.free_seats)}}</p>
+  </div>
+
+
+  <div id="seats-zone">
+
+    <div id="seat-details-container" *ngIf="seatDetails != -1">
+      <app-seat-details [train]="this.train" [seat_id]="seatDetails"
+                        (closeComponentEVent)="seatDetails=-1"></app-seat-details>
+    </div>
+
+    <div id="train-map">
+      <div class="seat-info"
+           *ngFor="let free of train.free_seats; let i=index"
+           [ngStyle]="{'background-color': free ? 'lightgreen' : 'red'}"
+           [ngClass]="{'focus': i == seatDetails}"
+           (click)="seatDetails = i">
+        {{i}}
+      </div>
+    </div>
+
+  </div>
+
+</div>

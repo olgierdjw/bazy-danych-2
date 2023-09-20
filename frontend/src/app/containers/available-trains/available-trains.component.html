@@ -1,0 +1,18 @@
+<div id="available-trains">
+
+  <div *ngIf="trains.length == 0">
+    <p>Train list empty</p>
+  </div>
+
+  <div class="train-box" *ngFor="let t of trains">
+    <span class="train-name">{{t.name}}</span>
+    <span>pozostało {{totalValue(t.free_seats)}} wolnych miejsc</span>
+    <span>    {{dateString(t.departure_time) | date}}    </span>
+    <button class="button" (click)="seeTrainDetails(t)">sprawdź miejsca</button>
+  </div>
+
+  <div class="train-box add-new">
+    <button class="button" disabled>dodaj pociąg</button>
+  </div>
+
+</div>

@@ -1,0 +1,47 @@
+<div id="seat-details-c">
+
+  <ng-container *ngIf="free != 1 && reservationDetails">
+    <div id="left">
+      <span style="font-size: 30px;">ZAREZERWOWANE MIEJSCE {{seat_id}}</span>
+      <br/>
+      szczególy zakupionego biletu
+    </div>
+
+    <div id="right">
+      User full name: {{reservationDetails.email}}
+      <br/>
+      Data zakupu: {{dateString(reservationDetails.reservation_time)}}
+      <button class="button button-red" (click)="deleteReservation(reservationDetails.email)">usuń rezerwacje</button>
+    </div>
+
+  </ng-container>
+
+  <ng-container *ngIf="free == 1">
+    <h2>nowa rezerwacja <br> miejsce {{seat_id}}</h2>
+
+    <div class="panel">
+      <email-list (emailPick)="newEmail($event)" (emailPick)="newEmail($event)" [currentEmail]="userEmail"></email-list>
+    </div>
+
+    <div class="panel">
+      <h3>Imie i nazwisko pasażera</h3>
+      <input type="text" placeholder="imie i nazwisko" value="Name" [(ngModel)]="userFullName"
+             (ngModelChange)="showWindows()">
+    </div>
+
+    <div class="panel">
+      <ng-container *ngIf="canStep3">
+        <h3>Odpłatność</h3>
+        <button class="buy-button" (click)="makeReservation(train._id, seat_id, userEmail, 100)">NORMALNY</button>
+        <button class="buy-button" (click)="makeReservation(train._id, seat_id, userEmail, 50)">50%</button>
+      </ng-container>
+
+      <ng-container *ngIf="!canStep3">
+        <p>
+          Podaj dane klienta, aby kupić bilet
+        </p>
+      </ng-container>
+
+    </div>
+  </ng-container>
+</div>

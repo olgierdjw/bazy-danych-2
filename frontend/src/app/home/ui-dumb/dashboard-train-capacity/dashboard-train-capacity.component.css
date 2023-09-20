@@ -1,0 +1,9 @@
+:host {
+  flex-direction: row;
+  align-items: center;
+}
+
+.train-row:hover {
+  cursor: pointer;
+  font-weight: bold;
+}

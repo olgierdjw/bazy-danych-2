@@ -1,0 +1,55 @@
+#app {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#app #router {
+  height: 93%;
+}
+
+#app #top {
+  height: 7%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border-bottom: 1px solid black;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+}
+
+#routing-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 0 700px;
+}
+
+#routing-list a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+#routing-list a:hover {
+  font-weight: bold;
+}
+
+
+#footer{
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: #eeeeee;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 5px;
+}
+/*color: #d57272;*/
+/*background-color: #343434;*/

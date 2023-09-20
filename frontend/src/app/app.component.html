@@ -1,0 +1,24 @@
+<div id="app">
+
+  <div id="top" *ngIf="isNotHomePage()">
+    <div style="display: flex; align-items: center; ">
+      <div style="font-weight: bold; font-size: 30px; padding: 0 10px">System rezerwacji biletów</div>
+      <div>[bazy danych 2]</div>
+    </div>
+    <div id="routing-list">
+      <a routerLink="/dashboard">Start</a>
+      <a routerLink="/trains">Pociągi</a>
+      <a routerLink="/clients">Użytkownicy</a>
+      <a routerLink="/books">Finanse</a>
+
+    </div>
+  </div>
+
+  <div id="router">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div *ngIf="!isNotHomePage()" id="footer">
+    System rezerwacji biletów [bazy danych 2]
+  </div>
+</div>
